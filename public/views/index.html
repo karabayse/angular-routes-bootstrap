@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/vendors/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <script src="/vendors/angular.min.js" charset="utf-8"></script>
+  <script src="/vendors/angular-route.min.js" charset="utf-8"></script>
+  <script src="/scripts/client.js" charset="utf-8"></script>
+  <base href="/">
+  <title>Angular Routes + Bootstrap</title>
+</head>
+
+<body ng-app="myApp">
+  <div class="container" id="wrapper">
+    <div class="jumbotron" id="header">
+      <h1>Fictional Fellas</h1>
+    </div>
+  </div>
+  <nav id="content">
+    <a href="/default">Home</a>
+    <a href="/george">George</a>
+    <a href="/jarjar">Jar Jar</a>
+    <a href="/joey">Joey</a>
+  </nav>
+  <ng-view></ng-view>
+  <div id="footer" bottom:0px>
+    <p>A sampling of my favorite fools</p>
+  </div>
+</body>
+
+</html>
