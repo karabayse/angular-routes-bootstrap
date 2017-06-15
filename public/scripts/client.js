@@ -1,9 +1,10 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute']);
 
 // inject our servie: $routeProvider is a service provided by Angular
-myApp.config(function ($routeProvider, $locationProvider){
+// , $locationProvider
+app.config(function ($routeProvider, $locationProvider){
   // create object literal
-  $routerProvider.when('/', {
+  $routeProvider.when('/', {
     templateUrl: 'views/default.html' ,
     controller: 'DefaultController as dc',
   }).when('/george', {
@@ -19,16 +20,16 @@ myApp.config(function ($routeProvider, $locationProvider){
   $locationProvider.html5Mode(true);
 });
 
-myApp.controller('DefaultController', DefaultController);
-myApp.controller('GerogeController', GerogeController);
-myApp.controller('JarJarController', JarJarController);
-myApp.controller('JoeyController', JoeyController);
+app.controller('DefaultController', DefaultController);
+app.controller('GeorgeController', GeorgeController);
+app.controller('JarJarController', JarJarController);
+app.controller('JoeyController', JoeyController);
 
 function DefaultController(){
   console.log('DefaultController is loaded');
 }
 
-function GerogeController(){
+function GeorgeController(){
   console.log('GeorgeController is loaded');
 }
 
